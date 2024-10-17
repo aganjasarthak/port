@@ -320,16 +320,43 @@
     </div>
   </div>
 
-  <div class="container">
-    <h1>HELLO, I'M SARTHAK AGANJA</h1>
-    <p class="subtitle">Exploring Engineered World</p> <!-- Updated subtitle text with inverted commas -->
-    <nav>
-      <a href="projects.html">Projects</a>
-      <a href="https://aganjasarthak.github.io/Web/">Beam-App</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About Me</a>
-    </nav>
-  </div>
+  <nav>
+    <a href="projects.html">Projects</a>
+    <a href="https://aganjasarthak.github.io/Web/">Beam-App</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About Me</a>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: center;    /* Center buttons */
+        gap: 15px;             /* Add space between buttons */
+        margin-top: 20px;      /* Add space above the navigation */
+    }
+
+    nav a {
+        padding: 10px 20px;    /* Increase clickable area */
+        background-color: #007BFF; /* Button background color */
+        color: white;          /* Text color */
+        text-decoration: none;  /* Remove underline */
+        border-radius: 5px;    /* Rounded corners */
+        transition: background-color 0.3s; /* Smooth background transition */
+    }
+
+    nav a:hover {
+        background-color: #0056b3; /* Darker shade on hover */
+    }
+
+    @media (min-width: 600px) {
+        nav {
+            flex-direction: row; /* Change to row on larger screens */
+            gap: 20px;          /* Increase space for larger screens */
+        }
+    }
+</style>
+
   
   <script>
   "use strict";

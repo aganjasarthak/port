@@ -36,16 +36,16 @@
       text-align: center;
       position: relative;
       z-index: 2;
+      display: none; /* Initially hidden */
     }
 
     h1 {
-  font-family: 'Flux', sans-serif; /* Changed to 'Flux', which is a sans-serif font */
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  animation: fadeIn 2s ease-in-out forwards;
-}
-
+      font-family: 'Flux', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      animation: fadeIn 2s ease-in-out forwards;
+    }
 
     .subtitle {
       font-size: 1.5rem;
@@ -61,30 +61,58 @@
 
     nav {
       display: flex;
-      flex-direction: row; /* Horizontal layout */
-      flex-wrap: wrap; /* Allow buttons to wrap */
-      justify-content: center; /* Center buttons */
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
-      margin: 10px; /* Spacing between buttons */
+      margin: 10px;
       font-size: 1.2rem;
       color: white;
       text-decoration: none;
       position: relative;
       animation: fadeIn 4s ease-in-out forwards;
       display: inline-block;
-      padding: 12px 24px; /* Increased padding for better touch targets */
-      border: 2px solid white; /* White border */
+      padding: 12px 24px;
+      border: 2px solid white;
       border-radius: 25px;
-      background-color: transparent; /* No fill */
+      background-color: transparent;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     nav a:hover {
-  background-color: white; /* Pure white background on hover */
-  color: black; /* Change text color to black on hover for contrast */
-}
+      background-color: white;
+      color: black;
+    }
+
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #00ff00;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
 
     /* Matrix Effect */
     .matrix {
@@ -113,65 +141,37 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     @keyframes drop {
-      0% {
-        transform: translateY(0);
-      }
-
-      100% {
-        transform: translateY(100vh);
-      }
+      0% { transform: translateY(0); }
+      100% { transform: translateY(100vh); }
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 3rem;
-      }
-
-      .subtitle {
-        font-size: 1.2rem;
-      }
-
-      nav a {
-        font-size: 1rem;
-      }
-
-      .column {
-        font-size: 1rem;
-      }
+      h1 { font-size: 3rem; }
+      .subtitle { font-size: 1.2rem; }
+      nav a { font-size: 1rem; }
+      .column { font-size: 1rem; }
     }
 
     @media (max-width: 480px) {
-      h1 {
-        font-size: 2.5rem;
-      }
-
-      .subtitle {
-        font-size: 1rem;
-      }
-
-      nav a {
-        font-size: 0.9rem;
-      }
-
-      .column {
-        font-size: 0.8rem;
-      }
+      h1 { font-size: 2.5rem; }
+      .subtitle { font-size: 1rem; }
+      nav a { font-size: 0.9rem; }
+      .column { font-size: 0.8rem; }
     }
   </style>
 </head>
 
 <body>
+  <div class="loading-screen">
+    <div class="loader"></div>
+  </div>
+
   <div class="container">
     <h1>Sarthak Aganja</h1>
     <div class="subtitle">"Aspiring to Innovate"</div>
@@ -184,43 +184,81 @@
     </nav>
   </div>
 
- <script>
-    "use strict";
-    (function() {
-      var drift = window.driftt = window.drift = window.driftt || [];
-      if (!drift.init) {
-        if (drift.invoked) {
-          window.console && console.error && console.error("Drift snippet included twice.");
-          return;
-        }
-        drift.invoked = true;
-        drift.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"];
-        drift.factory = function(method) {
-          return function() {
-            var args = Array.prototype.slice.call(arguments);
-            args.unshift(method);
-            drift.push(args);
-            return drift;
-          };
-        };
-        drift.methods.forEach(function(method) {
-          drift[method] = drift.factory(method);
-        });
-        drift.load = function(apiKey) {
-          var time = new Date().getTime();
-          var script = document.createElement("script");
-          script.type = "text/javascript";
-          script.async = true;
-          script.src = "https://js.driftt.com/include/" + time + "/" + apiKey + ".js";
-          document.getElementsByTagName("head")[0].appendChild(script);
-        };
-      }
-    })();
-    drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('vpd4n67fbk86'); // Your unique Drift key
-  </script>
+  <script>
+    // Function to hide loading screen, show content, and initialize chat
+    function showContentAndInitChat() {
+      document.querySelector('.loading-screen').style.display = 'none';
+      document.querySelector('.container').style.display = 'block';
+      initializeDriftChat();
+    }
 
+    // Function to initialize Drift chat
+    function initializeDriftChat() {
+      "use strict";
+      (function() {
+        var drift = window.driftt = window.drift = window.driftt || [];
+        if (!drift.init) {
+          if (drift.invoked) {
+            window.console && console.error && console.error("Drift snippet included twice.");
+            return;
+          }
+        
+          drift.invoked = true;
+          drift.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"];
+          drift.factory = function(method) {
+            return function() {
+              var args = Array.prototype.slice.call(arguments);
+              args.unshift(method);
+              drift.push(args);
+              return drift;
+            };
+          };
+          drift.methods.forEach(function(method) {
+            drift[method] = drift.factory(method);
+          });
+          drift.load = function(apiKey) {
+            var time = new Date().getTime();
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async = true;
+            script.src = "https://js.driftt.com/include/" + time + "/" + apiKey + ".js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+          };
+        }
+      })();
+      drift.SNIPPET_VERSION = '0.3.1';
+      drift.load('vpd4n67fbk86');
+      drift.config({
+  enableWelcomeMessage: false,
+  enableCampaigns: false, 
+  enableBots: false,
+  enableEmailCapture: false,
+  enableScheduler: false,
+  widgetPlacement: "bottom-right", 
+  widgetStyle: "default",
+  backgroundColor: "#1565C0",
+  foregroundColor: "#FFFFFF",
+  awayMessage: "We're currently away. Please leave us a message and we'll get back to you as soon as possible.",
+  welcomeMessage: "Hi there! How can we help you today?",
+  openStyle: "button",
+  buttonText: "Chat with us",
+  hideBranding: true
+});
+
+      // Optionally, you can add a small delay before showing the chat widget
+      setTimeout(function() {
+        drift.on('ready', function(api) {
+          api.showWelcomeMessage();
+        });
+      }, 1000); // 1 second delay, adjust as needed
+    }
+
+    // Wait for the page to load
+    window.addEventListener('load', function() {
+      // Simulate loading time (you can remove this in production)
+      setTimeout(showContentAndInitChat, 2000); // 2 seconds delay
+    });
+  </script>
 </body>
 
 </html>
-

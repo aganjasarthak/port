@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="s.jpg" type="image/jpeg">
+  <title>Sarthak Aganja</title>
+  <link href="https://fonts.googleapis.com/css2?family=Carolina+Typewriter&display=swap" rel="stylesheet"> <!-- Using a decorative font -->
+  <link href="https://fonts.googleapis.com/css2?family=Flux:wght@700&display=swap" rel="stylesheet"> <!-- Keeping the original font -->
+      <script>
+  "use strict";
+  !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+      t.factory = function(e) {
+        return function() {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
+    }
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('vpd4n67fbk86');
+</script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Flux', sans-serif;
+      background-image: url('https://removal.ai/wp-content/uploads/2021/09/black-background-04-coolbackgrounds.png'); 
+      /* Set background image */
+      background-size: cover;
+      /* Cover the whole screen */
+      background-position: center;
+      /* Center the background image */
+      color: white;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-family: 'Carolina Typewriter', cursive;
+      /* Set to Caroline-like font */
+      font-size: 4rem;
+      font-weight: 700;
+      /* Make the main heading bold */
+      text-transform: uppercase;
+      /* Make the text all capital letters */
+      animation: fadeIn 2s ease-in-out forwards;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+      color: white;
+      /* Normal white color for subtitle */
+      animation: fadeIn 3s ease-in-out forwards;
+    }
+
+    .subtitle::before,
+    .subtitle::after {
+      content: '"';
+      /* Add inverted commas around the subtitle */
+    }
+
+    nav a {
+      margin: 0 15px;
+      font-size: 1.2rem;
+      color: white;
+      text-decoration: none;
+      position: relative;
+      animation: fadeIn 4s ease-in-out forwards;
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid white;
+      /* White button outline */
+      border-radius: 25px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: white;
+      /* White background on hover */
+      color: black;
+      /* Black text on hover */
+    }
+
+    /* Matrix Effect */
+    .matrix {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .column {
+      position: absolute;
+      bottom: 100%;
+      white-space: nowrap;
+      animation: drop 5s linear infinite;
+      color: #00ff00;
+      /* Hacker's green */
+      font-size: 1.5rem;
+      /* Font size for the matrix */
+      text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+      /* Glow effect */
+    }
+
+    /* Add spacing for the small gap between two runs */
+    .small-gap {
+      line-height: 0.5;
+      /* Further reduce line height to minimize gaps */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes drop {
+      0% {
+        transform: translateY(0);
+      }
+
+      100% {
+        transform: translateY(100vh);
+      }
+    }
+
+    /* Responsive font sizes for smaller screens */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 3rem;
+      }
+
+      .subtitle {
+        font-size: 1.2rem;
+      }
+
+      nav a {
+        font-size: 1rem;
+      }
+
+      .column {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+      }
+
+      .column {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+ 
+    
+    <!-- Start of Async Drift Code -->
+    <script>
+    "use strict";
+
+    !function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('vpd4n67fbk86');
+    </script>
+    <!-- End of Async Drift Code -->
+</body>
+
+<body>
+
+  <div class="matrix">
+    <!-- Generate random columns of 1s and 0s with minimized gaps -->
+    <div class="column" style="left: 5%; animation-delay: 0s;">
+      1<br>1<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>
+      <span class="small-gap">1<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1</span>
+    </div>
+    <div class="column" style="left: 10%; animation-delay: 0.5s;">
+      0<br>1<br>1<br>0<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>
+      <span class="small-gap">0<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 15%; animation-delay: 1s;">
+      1<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>1<br>
+      <span class="small-gap">1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 20%; animation-delay: 1.5s;">
+      0<br>0<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>1<br>0<br>
+      <span class="small-gap">0<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 25%; animation-delay: 2s;">
+      1<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>1<br>0<br>1<br>0<br>
+      <span class="small-gap">1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 30%; animation-delay: 2.5s;">
+      0<br>1<br>1<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>
+      <span class="small-gap">0<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 35%; animation-delay: 3s;">
+      1<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>1<br>
+      <span class="small-gap">1<br>0<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 40%; animation-delay: 3.5s;">
+      0<br>0<br>1<br>1<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1<br>0<br>0<br>1<br>
+      <span class="small-gap">0<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 45%; animation-delay: 4s;">
+      1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>
+      <span class="small-gap">1<br>1<br>0<br>1<br>0<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 50%; animation-delay: 4.5s;">
+      0<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1<br>
+      <span class="small-gap">1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 55%; animation-delay: 5s;">
+      1<br>1<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>
+      <span class="small-gap">1<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1</span>
+    </div>
+    <div class="column" style="left: 60%; animation-delay: 5.5s;">
+      0<br>1<br>1<br>0<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>
+      <span class="small-gap">0<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 65%; animation-delay: 6s;">
+      1<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>1<br>
+      <span class="small-gap">1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 70%; animation-delay: 6.5s;">
+      0<br>0<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>1<br>0<br>
+      <span class="small-gap">0<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 75%; animation-delay: 7s;">
+      1<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>1<br>0<br>1<br>0<br>
+      <span class="small-gap">1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 80%; animation-delay: 7.5s;">
+      0<br>1<br>1<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>
+      <span class="small-gap">0<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 85%; animation-delay: 8s;">
+      1<br>1<br>0<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>1<br>
+      <span class="small-gap">1<br>0<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 90%; animation-delay: 8.5s;">
+      0<br>0<br>1<br>1<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1<br>0<br>0<br>1<br>
+      <span class="small-gap">0<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 95%; animation-delay: 9s;">
+      1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1<br>1<br>1<br>0<br>1<br>0<br>1<br>
+      <span class="small-gap">1<br>1<br>0<br>1<br>0<br>1<br>0<br>1<br>1</span>
+    </div>
+    <div class="column" style="left: 100%; animation-delay: 9.5s;">
+      0<br>1<br>1<br>1<br>0<br>0<br>1<br>1<br>1<br>0<br>1<br>1<br>0<br>1<br>1<br>
+      <span class="small-gap">1<br>1<br>0<br>1<br>1<br>1<br>0<br>1<br>1</span>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>HELLO, I'M SARTHAK AGANJA</h1>
+    <p class="subtitle">Exploring Engineered World</p> <!-- Updated subtitle text with inverted commas -->
+    <nav>
+      <a href="projects.html">Projects</a>
+      <a href="https://aganjasarthak.github.io/Web/">Beam-App</a>
+            <a href="contact.html">Contact</a>
+            <a href="about.html">About Me</a>
+    </nav>
+  </div>
+  
+  <script>
+  "use strict";
+
+  !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice.")));
+      t.invoked = !0, t.methods = ["identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on"],
+      t.factory = function(e) {
+        return function() {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        
+        // On Drift script load
+        o.onload = function() {
+          drift.on('ready', function(api) {
+            // Modify the chat button (remove any default text like "chat")
+            var driftButton = document.querySelector('.drift-open-chat');
+            
+            if (driftButton) {
+              driftButton.style.backgroundColor = '#4CAF50'; // Custom background color
+              driftButton.style.borderRadius = '50px';       // Rounded edges
+              driftButton.style.padding = '10px 20px';       // Padding for better appearance
+              driftButton.style.color = 'white';             // White text
+              driftButton.style.boxShadow = '0px 4px 15px rgba(0,0,0,0.3)'; // Subtle shadow
+              driftButton.style.fontFamily = 'Arial, sans-serif'; // Clean font
+              driftButton.style.fontSize = '16px';           // Larger font
+              driftButton.textContent = "📞 Get Support";     // Replace "Chat" with custom text
+            }
+            
+            // Modify the chatbox widget content
+            drift.api.config({
+              welcomeMessage: 'Welcome to our service!', // Customize welcome message
+              branding: false                            // Hide Drift branding
+            });
+          });
+        };
+
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
+    }
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('vpd4n67fbk86'); // Replace with your Drift ID
+</script>
+
+
+
+</body>
+
+</html>

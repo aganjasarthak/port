@@ -24,7 +24,7 @@
         .container {
             max-width: 15500px;
             width: 100%;
-            padding: 0px;
+            padding: 20px;
             margin: 0 auto;
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
@@ -234,23 +234,43 @@
 
         <a href="cv.pdf" class="download-btn" download>Download CV</a>
 <style>
-.background-container {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center the items vertically */
-}
+        .background-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+            justify-content: flex-start;
+        }
 
-.background-image {
-    width: 150px; /* Adjust width as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 20px; /* Space between heading and image */
-}
-</style>
-           
-<div class="background-container">
-    <h2>Background</h2>
-    <img src="k.png" class="background-image">
-<img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Tribhuvan_University_logo.svg/1200px-Tribhuvan_University_logo.svg.png" alt="Background Image" class="background-image">
-</div>
+        h2 {
+            margin: 0;
+        }
+
+        .background-image {
+            width: 100px; /* Set a base width */
+            height: auto; /* Maintain aspect ratio */
+            margin-left: 20px; /* Space between heading and images */
+        }
+
+        /* Ensure images scale properly on smaller screens */
+        @media (max-width: 600px) {
+            .background-image {
+                width: 80px; /* Adjust image size for mobile */
+                margin-left: 10px;
+            }
+
+            .background-container {
+                justify-content: center; /* Center items on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-container">
+        <h2>Background</h2>
+        <img src="k.png" class="background-image" alt="College Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Tribhuvan_University_logo.svg/1200px-Tribhuvan_University_logo.svg.png" alt="Tribhuvan University Logo" class="background-image">
+    </div>
+</body>
 
         <p>
             I hold a Bachelor's degree in Civil Engineering from Khwopa College of Engineering, Tribhuvan University, Nepal, where I completed my studies from 2016 to 2021. My coursework included a range of general and specialized courses, with electives in Rock Engineering, Rock Slope Engineering, and Environmental Impact Assessment. Prior to this, I completed my Higher Secondary Education at Global Collegiate Higher Secondary School in Pokhara, Nepal, focusing on the Science stream with a major in Mathematics.
